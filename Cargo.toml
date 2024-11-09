@@ -2,6 +2,13 @@
 name = "qraw"
 version = "0.1.0"
 edition = "2021"
+authors = ["amatagonsk"]
+license = "MIT"
+description = "simple terminal drawing canvas."
+repository = "https://github.com/amatagonsk/qraw"
+keywords = ["draw", "terminal", "ratatui", "tui"]
+categories = ["command-line-utilities"]
+readme = "README.md"
 
 [dependencies]
 color-eyre = "0.6"
