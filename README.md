@@ -2,7 +2,7 @@
 
 simple terminal drawing canvas.
 
-<img src="https://raw.githubusercontent.com/amatagonsk/qraw/master/.github/demo.avif" width="50%" />
+<img src="https://raw.githubusercontent.com/amatagonsk/qraw/master/.github/demo.avif" width="75%" />
 
 ## installation
 
