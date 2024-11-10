@@ -78,7 +78,7 @@ impl App {
         match key.code {
             KeyCode::Char('q') | KeyCode::Esc => self.exit = true,
             // todo? check popup (not need?
-            KeyCode::Char('s') => Self::save_text(self),
+            KeyCode::Char('s') => self.save_text(),
             KeyCode::Char('c') => self.paint_clear_all(),
             _ => {}
         }
@@ -136,8 +136,11 @@ impl App {
             }
         }
 
-        let re = Regex::new(r"\s+\n").unwrap();
-        let str_line = re.replace_all(&str_line, "\n");
+        let empty_re = Regex::new(r"(?m)(^ +\n)").unwrap();
+        let str_line = empty_re.replace_all(&str_line, "\n");
+
+        let re = Regex::new(r"(?m)(█ +\n)").unwrap();
+        let str_line = re.replace_all(&str_line, "█\n");
 
         file.write_all(format!("{}", str_line).as_bytes()).unwrap();
     }
